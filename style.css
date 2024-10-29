@@ -1,0 +1,258 @@
+.date_selector, .date_selector * {
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.date_selector {
+  background: #F2F2F2;
+  border: 1px solid #bbb;
+  padding: 5px;
+  margin: -1px 0 0 0;
+  position: absolute;
+  z-index: 100000;
+  display: none;
+}
+
+.date_selector_ieframe {
+  position: absolute;
+  z-index: 99999;
+  display: none;
+}
+
+.date_selector .month_nav {
+  margin: 0 0 5px 0;
+  padding: 0;
+  display: block;
+}
+
+.date_selector .month_name {
+  font-weight: bold;
+  line-height: 20px;
+  display: block;
+  text-align: center;
+}
+.date_selector .month_nav a {
+  display: block;
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #003C78;
+  text-align: center;
+  font-size: 120%;
+  overflow: hidden;
+}
+
+.date_selector .month_nav a:hover, .date_selector .month_nav a:focus {
+  background: none;
+  color: #003C78;
+  text-decoration: none;
+}
+
+.date_selector .prev {
+  left: 5px;
+}
+
+.date_selector .next {
+  right: 5px;
+}
+
+.date_selector table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.date_selector th, .date_selector td {
+  width: 2.5em;
+  height: 2em;
+  padding: 0;
+  text-align: center;
+}
+
+.date_selector td {
+  border: 1px solid #ccc;
+  line-height: 2em;
+  text-align: center;
+  white-space: nowrap;
+  background: white;
+}
+
+.date_selector td.today {
+  background: #FFFED9;
+}
+
+.date_selector td.unselected_month {
+  color: #ccc;
+}
+
+.date_selector td a {
+  display: block;
+  text-decoration: none !important;
+  width: 100%;
+  height: 100%;
+  line-height: 2em;
+  color: #003C78;
+  text-align: center;
+}
+
+.date_selector td.today a {
+  background: #FFFEB3;
+}
+
+.date_selector td.selected a {
+  background: #D8DFE5;
+  font-weight: bold;
+}
+
+.date_selector td a:hover {
+  background: #003C78;
+  color: white;
+}
+
+.wrap form {
+  background: #D2E6D2;
+  _background: transparent;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.postbox {
+  clear:both;
+  margin-top: 10px;
+  display: block;
+}
+
+#editor-toolbar {
+  margin: 0 !important;
+  background: #FFFFFF;
+}
+
+#the_editor {
+  clear: both;
+  background: #FFFFFF;
+  width: 880px;
+}
+
+.wrap label {
+  float: left;
+  width: 120px;
+}
+
+#poststuff {
+  clear:both;
+}
+
+.wrap .postbox label {
+  margin:0;padding:0;
+}
+
+.wrap .postbox h3 {
+  margin:0;padding:0;
+  line-height: 2.4em;
+}
+
+.wrap .postbox h3 em {
+  margin:0;padding:0;
+  line-height: normal;
+  display:block;
+  font-size:9px;
+  color: #868686;
+  font-weight: normal;
+}
+
+#events_when_start_time, #events_when_end_time {
+  width: 100px;
+}
+.wrap #events_when_start_date,
+.wrap #events_when_end_date,
+.wrap #range_ends_until {
+  width: 10em;
+}
+
+.wrap .postbox p.events_all_day label,
+.wrap .postbox p.events_all_day input {
+  display: inline;
+  float:none;
+}
+
+.wrap legend {
+  font-weight: bold;
+  color: #000000;
+}
+.wrap select {
+  width: 30em;
+}
+
+.wrap input, .wrap textarea {
+  width: 58em;
+  border: 1px solid #CCCCCC;
+}
+
+#ed_toolbar input, .wrap label input, .wrap p.submit input {
+  width: auto;
+}
+
+.wrap .postbox label.checkbox {
+  float:none;
+  display:block;
+  width: auto;
+  background: transparent;
+  margin-left:120px;
+}
+
+.wrap fieldset label,
+.wrap fieldset select {
+  width: auto;
+}
+
+.wrap fieldset {
+  clear:both;
+  border:0;
+  padding-left: 5em;
+  margin-left: 6.3em;
+  width: 58.7em;
+}
+
+.wrap fieldset legend h3 select {
+  margin-left: 20px;
+}
+
+.wrap fieldset fieldset {
+  padding-left: 1em;
+  margin: 5px 0;
+  width: auto;
+}
+
+.wrap fieldset .days_of_the_week label,
+.wrap fieldset .king_of_month label {
+  margin-left: 5px;
+}
+
+.wrap fieldset label {
+  line-height: 2em;
+}
+
+.wrap select.the_repeat {
+  width: 300px;
+}
+
+#events_excerpt {
+  height: 4em;
+}
+
+#range_ends_until {
+  float:left;
+  margin-left: 5px;
+}
+
+.wrap .the_range label {
+  margin-left: 5px;
+}

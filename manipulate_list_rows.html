@@ -1,0 +1,9 @@
+    	<tr {CLASS_ACTIVE}>
+    		<td class='name' width="140"><label><input type="checkbox" name="delete_id[]" value="{ID}"> {DATE}</label></td>
+    		<td>{TITLE}</td>
+    		<td>{STATUS}</td>
+    		<td class="action-links">
+    		  <a class="button" href="post-new.php?page=agenda/write&amp;edit_id={ID}">Edit</a>
+    		  <a class="button" href="edit.php?page=agenda/manage&amp;delete_id[]={ID}&amp;p={P}">Delete</a>
+    		</td>
+      </tr>

@@ -1,0 +1,31 @@
+<div class="wrap">
+  <h2>{MANAGE_EVENTS} (<a href="post-new.php?page=agenda/write">{NEW}</a>)</h2>
+  {MESSAGE}
+  <br class="clear" />
+  <ul class="subsubsub">
+    <li><a {CURRENT_ALL}href="?page=agenda/manage">{ALL}</a> |</li>
+    <li><a {CURRENT_PUBLISHED}href="?page=agenda/manage&status=publish">{PUBLISHED}</a> |</li>
+    <li><a {CURRENT_DRAFT}href="?page=agenda/manage&status=draft">{DRAFT}</a></li>
+  </ul>
+  <form action="edit.php">
+    <input type="hidden" name="page" value="agenda/manage">
+    <input type="hidden" name="p" value="{P}">
+    <table class="widefat">
+      <thead>
+        <tr>
+          <th>{DATE}</th>
+          <th>{TITLE}</th>
+          <th  width="50">{STATUS}</th>
+          <th class="action-links" width="100">{ACTIONS}</th>
+        </tr>
+      </thead>
+      <tbody class="plugins">
+        {ROWS}
+      </tbody>
+    </table>
+    <div class="tablenav">{PAGE_LINKS}</DIV>
+    <p class="submit">
+      <input type="submit" value="{DELETE}"  />
+    </p>
+  </form>
+</div>

@@ -1,0 +1,179 @@
+<div class="wrap">
+  <h2>{WRITE_EVENT}</h2>
+  {MSG}
+  <form name="event_form">
+    <input type="hidden" name="page" value="agenda/write"  />
+    {INPUT_ID}
+    <div class="postbox">
+      <h3><label for="title">{WHAT}</label></h3>
+      <input type="text" name="v_what" value="{v_what}" autocomplete="off" id="title"  />
+    </div>
+    <div class="postbox">
+      <input type="hidden" name="v_all_day" value="no_all_day"  />
+      <h3><label for="events_when_start_date">{WHEN}</label></h3>
+      <p class="events_all_day">
+        <input type="text" id="events_when_start_date" name="v_when_start_date" value="{v_when_start_date}" autocomplete="off"  />
+        <input type="text" id="events_when_start_time" name="v_when_start_time" value="{v_when_start_time}" autocomplete="off"  />
+        {TO}
+        <input type="text" id="events_when_end_date" name="v_when_end_date" value="{v_when_end_date}" autocomplete="off"  />
+        <input type="text" id="events_when_end_time" name="v_when_end_time" value="{v_when_end_time}" autocomplete="off"  />
+        <label for="events_all_day">
+          <input type="checkbox" name="v_all_day" id="events_all_day" value="v_all_day"{v_all_day}  /> {ALL_DAY}
+        </label>
+      </p>
+    </div>
+    <div class="postbox">
+      <fieldset>
+        <legend><h3>{REPEATS}</h3></legend>
+        <fieldset class="the_no_repeat">
+          <legend>
+            <label for="repeat_no_repeat">
+              <input type="radio" name="repeat" value="no_repeat"{v_repeat_no_repeat} id="repeat_no_repeat"  />
+              {NO_REPEAT}
+            </label>
+          </legend>
+        </fieldset>
+        <fieldset>
+          <legend>
+            <label for="repeat_daily">
+              <input type="radio" name="repeat" value="daily"{v_repeat_daily} id="repeat_daily"  />
+              {REPEAT_DAILY}
+            </label>
+          </legend>
+          <label for="repeat_daily_every">
+            {REPEAT_EVERY}
+            <select name="repeat_daily_every" id="repeat_daily_every">{DAILY_OPTIONS}</select>
+            {DAYS}
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <label for="repeat_weekly">
+              <input type="radio" name="repeat" value="weekly"{v_repeat_weekly} id="repeat_weekly"  />
+              {REPEAT_WEEKLY}
+            </label>
+          </legend>
+          <label for="repeat_weekly_every">
+            {REPEAT_EVERY}
+            <select name="repeat_weekly_every" id="repeat_weekly_every">{WEEKLY_OPTIONS}</select>
+            {WEEKS}
+          </label>
+          <fieldset class="days_of_the_week">
+            <legend>{REPEAT_ON}</legend>
+            <label for="repeat_weekly_on_sunday"><input type="checkbox" name="v_repeat_weekly_on_sunday" value="sunday" id="repeat_weekly_on_sunday"{v_repeat_weekly_on_sunday}  /> {SUNDAY}</label>
+            <label for="repeat_weekly_on_monday"><input type="checkbox" name="v_repeat_weekly_on_monday" value="monday" id="repeat_weekly_on_monday"{v_repeat_weekly_on_monday}  /> {MONDAY}</label>
+            <label for="repeat_weekly_on_tuesday"><input type="checkbox" name="v_repeat_weekly_on_tuesday" value="tuesday" id="repeat_weekly_on_tuesday"{v_repeat_weekly_on_tuesday}  /> {TUESDAY}</label>
+            <label for="repeat_weekly_on_wednesday"><input type="checkbox" name="v_repeat_weekly_on_wednesday" value="wednesday" id="repeat_weekly_on_wednesday"{v_repeat_weekly_on_wednesday}  /> {WEDNESDAY}</label>
+            <label for="repeat_weekly_on_thursday"><input type="checkbox" name="v_repeat_weekly_on_thursday" value="thursday" id="repeat_weekly_on_thursday"{v_repeat_weekly_on_thursday}  /> {THURSDAY}</label>
+            <label for="repeat_weekly_on_friday"><input type="checkbox" name="v_repeat_weekly_on_friday" value="friday" id="repeat_weekly_on_friday"{v_repeat_weekly_on_friday}  /> {FRIDAY}</label>
+            <label for="repeat_weekly_on_saturday"><input type="checkbox" name="v_repeat_weekly_on_saturday" value="saturday" id="repeat_weekly_on_saturday"{v_repeat_weekly_on_saturday}  /> {SATURDAY}</label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <label for="repeat_monthly">
+              <input type="radio" name="repeat" value="monthly"{v_repeat_monthly} id="repeat_monthly"  />
+              {REPEAT_MONTHLY}
+            </label>
+          </legend>
+          <label for="repeat_monthly_every">
+            {REPEAT_EVERY}
+            <select name="repeat_monthly_every" id="repeat_monthly_every">{MONTHLY_OPTIONS}</select>
+            {MONTHS}
+          </label>
+          <fieldset class="king_of_month">
+            <legend>{REPEAT_BY}</legend>
+            <label for="repeat_monthly_by_day_of_the_month"><input type="radio" name="repeat_monthly_by" id="repeat_monthly_by_day_of_the_month" value="month"{v_repeat_monthly_by_day_of_the_month}  /> {DAY_OF_THE_MONTH}</label>
+            <label for="repeat_monthly_by_day_of_the_week"><input type="radio" name="repeat_monthly_by" id="repeat_monthly_by_day_of_the_week" value="week"{v_repeat_monthly_by_day_of_the_week}  /> {DAY_OF_THE_WEEK}</label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            <label for="repeat_yearly">
+              <input type="radio" name="repeat" value="yearly"{v_repeat_yearly} id="repeat_yearly"  />
+              {REPEAT_YEARLY}
+            </label>
+          </legend>
+          <label for="repeat_yearly_every">
+            {REPEAT_EVERY}
+            <select name="repeat_yearly_every" id="repeat_yearly_every">{YEARLY_OPTIONS}</select>
+            {YEARS}
+          </label>
+        </fieldset>
+
+        <fieldset class="the_range">
+          <legend><h3>{RANGE}</h3></legend>
+          {ENDS}
+          <label for="range_never">
+            <input type="radio" name="range" value="never"{v_range_never} id="range_never"  />
+            {NEVER}
+          </label>
+          <label for="range_until">
+            <input type="radio" name="range" value="until"{v_range_until} id="range_until"  />
+            {UNTIL}
+          </label>
+          <input type="date" name="v_range_ends_until" id="range_ends_until" value="{v_range_ends_until}"  />
+        </fieldset>
+      </fieldset>
+    </div>
+    <div class="postbox">
+        <h3><label for="events_where">{WHERE}</label></h3>
+        <input type="text" id="events_where" name="v_where" value="{v_where}" autocomplete="off"  />
+    </div>
+    <div class="postbox">
+        <h3><label for="events_calendar">{CALENDAR}</label></h3>
+        <select name="v_calendar" id="events_calendar">
+          {OPTIONS_CALENDAR}
+        </select>
+    </div>
+    <div class="postbox">
+      <h3><label for="editorcontainer">{DESCRIPTION}</label></h3>
+      <div id="poststuff"><div id="the_editor">{THE_EDITOR}</div></div>
+    </div>
+    <div class="postbox">
+        <h3><label for="events_tags">{TAGS}<em>{HOWTO_TAGS}</em></label></h3>
+        <input type="text" id="tags-input" autocomplete="off"  />
+        <input type="text" id="events_tags" name="v_tags" value="{v_tags}" autocomplete="off"  />
+    </div>
+    <div class="postbox">
+      <h3><label for="events_excerpt">{EXCERPT}</label></h3>
+      <textarea id="events_excerpt" name="v_excerpt">{v_excerpt}</textarea>
+    </div>
+    <div class="postbox">
+      <h3><label for="events_author">{AUTHOR}</label></h3>
+      {v_author}
+    </div>
+    <div class="postbox">
+      <input type="hidden" name="v_comments" value="closed"  />
+      <input type="hidden" name="v_pings" value="closed"  />
+      <input type="hidden" name="v_destak" value="0"  />
+      <label for="events_destak" class="checkbox">
+        <input type="checkbox" id="events_destak" name="v_destak" value="1"{v_destak}  /> {DESTAK}
+      </label>
+      <label for="events_pings" class="checkbox">
+        <input type="checkbox" id="events_pings" name="v_pings" value="open"{v_pings}  /> {ALLOW_PINGS}
+      </label>
+      <label for="events_comments" class="checkbox">
+        <input type="checkbox" id="events_comments" name="v_comments" value="open"{v_comments}  /> {ALLOW_COMMENTS}
+      </label>
+    </div>
+    <p class="submit">
+       <input type="submit" name="submit" value="{SAVE}" class="button"  />
+       <input type="submit" name="submit-publish" value="{PUBLISH}" class="button"  />
+    </p>
+  </form>
+</div>
+
+
+
+
+<style type="text/css">
+{STYLE}
+</style>
+
+<script type="text/javascript" language="javascript"><!--
+{SCRIPT}
+// --></script>

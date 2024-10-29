@@ -1,0 +1,20 @@
+<div class="wrap">
+  <h2>{TITLE}</h2>
+  <form method="post" action="options.php">
+    {UPDATE_OPTIONS}
+    <input type="hidden" name="page_options" value="event_category" />
+    <input type="hidden" name="action" value="update" />
+    <table class="form-table">
+      <tr valign="top">
+        <th>
+          {CATEGORY}
+        </th>
+        <td>
+          <select name="event_category" id="event_category">
+            {OPTIONS}
+          </select>
+        </td>
+    </table>
+    <p class="submit"><input type="submit" name="Submit" value="{SAVE}" /></p>
+  </form>
+</div>
